@@ -44,10 +44,10 @@ private:
 	class UInputAction* TurnAction;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
-	float Speed = 400.f;
+	float Speed = 600.f;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
-	float TurnRate = 100.f;
+	float TurnRate = 120.f;
 
 	APlayerController* TankPlayerController;
 
@@ -58,4 +58,8 @@ private:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	void HandleDestruction(); 
+
+	APlayerController* GetTankPlayerController() const { return TankPlayerController; }
 };

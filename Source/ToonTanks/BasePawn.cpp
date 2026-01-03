@@ -24,6 +24,7 @@ ABasePawn::ABasePawn()
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
 }
 
+
 // Called when the game starts or when spawned
 void ABasePawn::BeginPlay()
 {
@@ -36,6 +37,11 @@ void ABasePawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+}
+
+void ABasePawn::HandleDestruction()
+{
+	//	
 }
 
 void ABasePawn::RotateTurret(FVector LookAtTarget, float DeltaTime)
