@@ -1,0 +1,4 @@
+# Ignore C# and C files for language stats
+*.cs linguist-vendored
+*.c linguist-vendored
+*.h linguist-language=C++
