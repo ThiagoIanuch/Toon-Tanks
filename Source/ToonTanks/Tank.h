@@ -55,6 +55,8 @@ private:
 
 	void Turn(const struct FInputActionInstance& Instance);
 
+	bool PlayerIsAlive = true;
+
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -62,4 +64,6 @@ public:
 	void HandleDestruction(); 
 
 	APlayerController* GetTankPlayerController() const { return TankPlayerController; }
+
+	bool GetPlayerIsAlive() const { return PlayerIsAlive; }
 };
