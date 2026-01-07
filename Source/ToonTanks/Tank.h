@@ -73,4 +73,6 @@ public:
 	APlayerController* GetTankPlayerController() const { return TankPlayerController; }
 
 	bool GetPlayerIsAlive() const { return PlayerIsAlive; }
+
+	void SetPlayerIsAlive(bool bIsAlive) { PlayerIsAlive = bIsAlive; }
 };

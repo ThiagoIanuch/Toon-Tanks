@@ -31,6 +31,7 @@ void AToonTanksGameMode::ActorDied(AActor* DeadActor)
 
 		if (TargetTowers == 0)
 		{
+			Tank->SetPlayerIsAlive(false);
 			GameOver(true);
 		}
 	}
