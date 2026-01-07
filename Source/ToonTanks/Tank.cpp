@@ -71,11 +71,16 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ATank::Move);
 		EnhancedInputComponent->BindAction(TurnAction, ETriggerEvent::Triggered, this, &ATank::Turn);
 		EnhancedInputComponent->BindAction(FireAction, ETriggerEvent::Started, this, &ATank::Fire);
+		EnhancedInputComponent->BindAction(RestartGameAction, ETriggerEvent::Started, this, &ATank::RestartGame);
 	}
 }
 
 void ATank::Move(const FInputActionInstance& Instance)
 {
+	if (!PlayerIsAlive)
+	{
+		return;
+	}
 	float Value = Instance.GetValue().Get<float>();
 	float DeltaTime = UGameplayStatics::GetWorldDeltaSeconds(this);
 	FVector DeltaLocation = FVector::ZeroVector;
@@ -87,6 +92,11 @@ void ATank::Move(const FInputActionInstance& Instance)
 
 void ATank::Turn(const FInputActionInstance& Instance)
 {
+	if (!PlayerIsAlive)
+	{
+		return;
+	}
+
 	float Value = Instance.GetValue().Get<float>();
 	float DeltaTime = UGameplayStatics::GetWorldDeltaSeconds(this);
 	FRotator DeltaRotation = FRotator::ZeroRotator;
@@ -94,4 +104,24 @@ void ATank::Turn(const FInputActionInstance& Instance)
 	DeltaRotation.Yaw = Value * TurnRate * DeltaTime;;
 
 	AddActorLocalRotation(DeltaRotation, true);
+}
+
+void ATank::Fire()
+{
+	if (!PlayerIsAlive)
+	{
+		return;
+	}
+
+	Super::Fire();
+}
+
+void ATank::RestartGame()
+{
+	if (PlayerIsAlive)
+	{
+		return;
+	}
+
+	UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()));
 }

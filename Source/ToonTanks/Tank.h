@@ -43,6 +43,9 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Enhanced Input")
 	class UInputAction* TurnAction;
 
+	UPROPERTY(EditAnywhere, Category = "Enhanced Input")
+	class UInputAction* RestartGameAction;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float Speed = 600.f;
 
@@ -54,6 +57,10 @@ private:
 	void Move(const struct FInputActionInstance& Instance);
 
 	void Turn(const struct FInputActionInstance& Instance);
+
+	void Fire();
+
+	void RestartGame();
 
 	bool PlayerIsAlive = true;
 
