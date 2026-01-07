@@ -4,6 +4,7 @@
 #include "HealthComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "ToonTanksGameMode.h"
+#include "Tank.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent()
@@ -42,6 +43,11 @@ void UHealthComponent::DamageTaken(AActor* DamagedActor, float Damage, const UDa
 	if (Damage <= 0.f) return;
 
 	Health -= Damage;
+
+	if (Cast<ATank>(DamagedActor))
+	{
+		ToonTanksGameMode->HandleHealthBar(Health);
+	}
 
 	if (Health <= 0 && ToonTanksGameMode) 
 	{

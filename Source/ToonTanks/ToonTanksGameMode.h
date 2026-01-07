@@ -19,6 +19,8 @@ public:
 
 	void ActorDied(AActor* DeadActor);
 
+	void HandleHealthBar(float CurrentHealth);
+
 protected:
 
 	virtual void BeginPlay() override;
@@ -28,6 +30,9 @@ protected:
 	
 	UFUNCTION(BlueprintImplementableEvent)
 	void GameOver(bool bWonGame);
+
+	UFUNCTION(BlueprintImplementableEvent)
+	void HealthBar(float CurrentHealth);
 
 private:
 

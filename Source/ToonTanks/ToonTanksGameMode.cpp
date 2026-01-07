@@ -79,3 +79,8 @@ int32 AToonTanksGameMode::GetTargetTowerCount()
 
 	return Towers.Num();
 }
+
+void AToonTanksGameMode::HandleHealthBar(float CurrentHealth)
+{
+	HealthBar(CurrentHealth);
+}

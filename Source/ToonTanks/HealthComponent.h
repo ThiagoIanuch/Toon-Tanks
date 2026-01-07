@@ -30,6 +30,7 @@ private:
 
 	class AToonTanksGameMode* ToonTanksGameMode;
 
+	class ATank* Tank;
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
