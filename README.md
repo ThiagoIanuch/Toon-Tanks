@@ -1,6 +1,6 @@
 # Toon Tanks
 
-Toon Tanks is a third-person shooter game where the player controls a tank and battles enemy turrets. Developed in Unreal Engine 5, following part 4/5 of the course "Unreal Engine 5 C++ Developer: Learn C++ & Make Video Games" by Ben Tristem and GameDev.tv Team.
+Toon Tanks is a third-person shooter game where the player controls a tank and battles enemy turrets. Developed in Unreal Engine 5, following part 4/5 of the course "<a href="https://www.udemy.com/course/unrealcourse/">Unreal Engine 5 C++ Developer: Learn C++ & Make Video Games</a>" by Ben Tristem and GameDev.tv Team.
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/285b5d0d-f939-4b92-a714-5d217003a458" />
 
