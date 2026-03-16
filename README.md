@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/e883e52c-ba0d-4ff0-a1d5-d3662ca49fbb
 1. Download the game on my <a href="https://thiagoianuch.itch.io/toon-tanks">itch.io</a> **(Windows only)**
 
 <div align="center">
-    <a href="https://thiagoianuch.itch.io/crypt-raider">
+    <a href="https://thiagoianuch.itch.io/toon-tanks">
         <img src="http://jessemillar.github.io/available-on-itchio-badge/badge-bw.png" alt="Available on itch.io">
     </a>
 </div>
